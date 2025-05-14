@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso Agendamiento</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        input[type="password"] {
+            padding: 12px;
+            width: 80%;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #0078d4;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Ingrese la contraseña</h2>
+        <input type="password" id="clave" placeholder="Contraseña">
+        <br>
+        <button onclick="validarClave()">Ingresar</button>
+    </div>
+
+    <script>
+        function validarClave() {
+            var claveIngresada = document.getElementById("clave").value;
+            if (claveIngresada === "9707") {
+                window.location.href = "https://outlook.office.com/book/AgendamientosCentrosdeservicio@enelcom.onmicrosoft.com/";
+            } else {
+                alert("Contraseña incorrecta");
+            }
+        }
+    </script>
+
+</body>
+</html>
